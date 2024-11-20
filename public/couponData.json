@@ -1,0 +1,364 @@
+[
+  {
+    "_id": "1",
+    "brand_name": "Daraz",
+    "rating": 4.5,
+    "description": "One of the largest online shopping platforms in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/yfygqtT/Daraz-New-Logo.png",
+    "coupons": [
+      {
+        "coupon_code": "DARAZ50",
+        "description": "Get 50% off on selected products.",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase of 1000 BDT.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "DARAZNEW20",
+        "description": "20% off for new users.",
+        "expiry_date": "2024-11-30",
+        "condition": "Valid for first-time users only.",
+        "coupon_type": "New User"
+      }
+    ],
+    "shop_Link": "https://www.daraz.com.bd",
+    "category": "E-commerce",
+    "isSaleOn": true
+  },
+  {
+    "_id": "2",
+    "brand_name": "Pickaboo",
+    "rating": 4.3,
+    "description": "Trusted e-commerce platform for electronics and gadgets.",
+    "brand_logo": "https://i.ibb.co.com/HHjnjJK/picaboo.png",
+    "coupons": [
+      {
+        "coupon_code": "PICK500",
+        "description": "Flat 500 BDT off on orders over 5000 BDT.",
+        "expiry_date": "2024-11-25",
+        "condition": "Applies to electronics only.",
+        "coupon_type": "Flat Discount"
+      }
+    ],
+    "shop_Link": "https://www.pickaboo.com",
+    "category": "Electronics",
+    "isSaleOn": true
+  },
+  {
+    "_id": "3",
+    "brand_name": "Chaldal",
+    "rating": 4.7,
+    "description": "Bangladesh's leading online grocery store.",
+    "brand_logo": "https://i.ibb.co.com/3dknSyk/chaldal.jpg",
+    "coupons": [
+      {
+        "coupon_code": "CHAL10",
+        "description": "10% discount on your first grocery order.",
+        "expiry_date": "2025-01-01",
+        "condition": "Minimum purchase of 500 BDT.",
+        "coupon_type": "New User"
+      }
+    ],
+    "shop_Link": "https://www.chaldal.com",
+    "category": "Groceries",
+    "isSaleOn": false
+  },
+  {
+    "_id": "4",
+    "brand_name": "Foodpanda",
+    "rating": 4.4,
+    "description": "Top food delivery service in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/3N1Hywy/foodpanda.webp",
+    "coupons": [
+      {
+        "coupon_code": "FPFREEDEL",
+        "description": "Free delivery on orders over 300 BDT.",
+        "expiry_date": "2024-12-01",
+        "condition": "Available in selected areas.",
+        "coupon_type": "Delivery"
+      }
+    ],
+    "shop_Link": "https://www.foodpanda.com.bd",
+    "category": "Food Delivery",
+    "isSaleOn": true
+  },
+  {
+    "_id": "5",
+    "brand_name": "AjkerDeal",
+    "rating": 4.1,
+    "description": "Popular e-commerce site offering deals and discounts.",
+    "brand_logo": "https://i.ibb.co.com/YP9Ht6r/ajkerdeal.png",
+    "coupons": [
+      {
+        "coupon_code": "DEAL20",
+        "description": "20% off on fashion items.",
+        "expiry_date": "2024-12-31",
+        "condition": "Maximum discount is 200 BDT.",
+        "coupon_type": "Discount"
+      }
+    ],
+    "shop_Link": "https://www.ajkerdeal.com",
+    "category": "E-commerce",
+    "isSaleOn": true
+  },
+  {
+    "_id": "6",
+    "brand_name": "Bagdoom",
+    "rating": 4.0,
+    "description": "Online shopping platform for lifestyle products.",
+    "brand_logo": "https://i.ibb.co.com/BKMjsmf/bagdoom.jpg",
+    "coupons": [
+      {
+        "coupon_code": "BDOOM15",
+        "description": "15% off on all beauty products.",
+        "expiry_date": "2024-12-15",
+        "condition": "Valid for beauty products only.",
+        "coupon_type": "Discount"
+      }
+    ],
+    "shop_Link": "https://www.bagdoom.com",
+    "category": "Lifestyle",
+    "isSaleOn": true
+  },
+  {
+    "_id": "7",
+    "brand_name": "Othoba",
+    "rating": 4.2,
+    "description": "Wide range of products including electronics, fashion, and more.",
+    "brand_logo": "https://i.ibb.co.com/qjpKLRF/othoba.jpg",
+    "coupons": [
+      {
+        "coupon_code": "OTHOBA200",
+        "description": "200 BDT off on orders over 2000 BDT.",
+        "expiry_date": "2024-11-30",
+        "condition": "Minimum order value required.",
+        "coupon_type": "Flat Discount"
+      }
+    ],
+    "shop_Link": "https://www.othoba.com",
+    "category": "E-commerce",
+    "isSaleOn": false
+  },
+  {
+    "_id": "8",
+    "brand_name": "Shajgoj",
+    "rating": 4.6,
+    "description": "The ultimate destination for beauty and skincare products.",
+    "brand_logo": "https://i.ibb.co.com/xsQMXQ5/shajgoj.png",
+    "coupons": [
+      {
+        "coupon_code": "SHJGFREE",
+        "description": "Free gift with every order over 1000 BDT.",
+        "expiry_date": "2024-12-10",
+        "condition": "Valid for all users.",
+        "coupon_type": "Gift"
+      }
+    ],
+    "shop_Link": "https://www.shajgoj.com",
+    "category": "Beauty",
+    "isSaleOn": true
+  },
+  {
+    "_id": "9",
+    "brand_name": "Evaly",
+    "rating": 3.9,
+    "description": "E-commerce platform offering cashback and discounts.",
+    "brand_logo": "https://i.ibb.co.com/YZZWynx/Evaly-logo-01.jpg",
+    "coupons": [
+      {
+        "coupon_code": "EVALY100",
+        "description": "100 BDT cashback on orders over 1000 BDT.",
+        "expiry_date": "2024-11-25",
+        "condition": "Cashback credited to wallet.",
+        "coupon_type": "Cashback"
+      }
+    ],
+    "shop_Link": "https://www.evaly.com.bd",
+    "category": "E-commerce",
+    "isSaleOn": false
+  },
+  {
+    "_id": "10",
+    "brand_name": "PriyoShop",
+    "rating": 4.3,
+    "description": "E-commerce platform offering a variety of products at affordable prices.",
+    "brand_logo": "https://i.ibb.co.com/8gYz6QC/priyoshop.png",
+    "coupons": [
+      {
+        "coupon_code": "PRIYO300",
+        "description": "300 BDT off on orders over 3000 BDT.",
+        "expiry_date": "2024-12-31",
+        "condition": "Valid for fashion products only.",
+        "coupon_type": "Flat Discount"
+      }
+    ],
+    "shop_Link": "https://www.priyoshop.com",
+    "category": "E-commerce",
+    "isSaleOn": true
+  },
+  {
+    "_id": "11",
+    "brand_name": "Rokomari",
+    "rating": 4.8,
+    "description": "Bangladesh's top online bookstore and educational resource platform.",
+    "brand_logo": "https://i.ibb.co.com/kKw1VkT/Rokomari-com.webp",
+    "coupons": [
+      {
+        "coupon_code": "ROKOMARI20",
+        "description": "20% off on all books.",
+        "expiry_date": "2024-12-31",
+        "condition": "Maximum discount is 500 BDT.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "EDUCATION10",
+        "description": "10% off on educational resources.",
+        "expiry_date": "2025-01-15",
+        "condition": "Valid for textbooks only.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "FREEDELIVERY",
+        "description": "Free delivery on orders over 1000 BDT.",
+        "expiry_date": "2024-11-30",
+        "condition": "Minimum purchase required.",
+        "coupon_type": "Delivery"
+      }
+    ],
+    "shop_Link": "https://www.rokomari.com",
+    "category": "Books",
+    "isSaleOn": true
+  },
+  {
+    "_id": "12",
+    "brand_name": "Bikroy",
+    "rating": 4.2,
+    "description": "Largest online marketplace in Bangladesh for buying and selling products.",
+    "brand_logo": "https://i.ibb.co.com/vq0NvKD/bikroy.png",
+    "coupons": [
+      {
+        "coupon_code": "BIKROYADS",
+        "description": "50% off on premium ads.",
+        "expiry_date": "2024-12-15",
+        "condition": "Valid for posting ads only.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "SELLER25",
+        "description": "25% discount for top sellers.",
+        "expiry_date": "2024-12-31",
+        "condition": "Must have sold 10+ items.",
+        "coupon_type": "Seller"
+      },
+      {
+        "coupon_code": "LOYALTY10",
+        "description": "10% off for loyalty members.",
+        "expiry_date": "2025-01-01",
+        "condition": "Applicable for verified users.",
+        "coupon_type": "Loyalty"
+      }
+    ],
+    "shop_Link": "https://www.bikroy.com",
+    "category": "Marketplace",
+    "isSaleOn": false
+  },
+  {
+    "_id": "13",
+    "brand_name": "Pathao",
+    "rating": 4.5,
+    "description": "Leading ride-sharing and food delivery app in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/YbLyhVN/pathao.jpg",
+    "coupons": [
+      {
+        "coupon_code": "PATHAO50",
+        "description": "50 BDT off on your next ride.",
+        "expiry_date": "2024-12-31",
+        "condition": "Applicable for rides only.",
+        "coupon_type": "Ride Discount"
+      },
+      {
+        "coupon_code": "EATS15",
+        "description": "15% off on food delivery orders.",
+        "expiry_date": "2024-11-30",
+        "condition": "Minimum order value of 500 BDT.",
+        "coupon_type": "Food Delivery"
+      },
+      {
+        "coupon_code": "FIRST50",
+        "description": "50% off on your first service.",
+        "expiry_date": "2025-01-15",
+        "condition": "Valid for new users.",
+        "coupon_type": "New User"
+      }
+    ],
+    "shop_Link": "https://www.pathao.com",
+    "category": "Ride Sharing",
+    "isSaleOn": true
+  },
+  {
+    "_id": "14",
+    "brand_name": "WeGro",
+    "rating": 4.3,
+    "description": "Fresh and organic farm-to-table grocery delivery in Bangladesh.",
+    "brand_logo": "https://i.ibb.co.com/d6vRkSH/wegro.png",
+    "coupons": [
+      {
+        "coupon_code": "WEGRO10",
+        "description": "10% off on organic fruits and vegetables.",
+        "expiry_date": "2024-12-25",
+        "condition": "Maximum discount of 200 BDT.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "FREESHIPPING",
+        "description": "Free delivery on orders over 1000 BDT.",
+        "expiry_date": "2024-11-30",
+        "condition": "Available in Dhaka only.",
+        "coupon_type": "Delivery"
+      },
+      {
+        "coupon_code": "LOYALTY20",
+        "description": "20% cashback for loyalty members.",
+        "expiry_date": "2024-12-31",
+        "condition": "Cashback credited to account.",
+        "coupon_type": "Cashback"
+      }
+    ],
+    "shop_Link": "https://www.wegro.com.bd",
+    "category": "Groceries",
+    "isSaleOn": false
+  },
+  {
+    "_id": "15",
+    "brand_name": "PriyoFood",
+    "rating": 4.6,
+    "description": "Your favorite online food and beverage store.",
+    "brand_logo": "https://i.ibb.co.com/dB1GD5z/priyofood.png",
+    "coupons": [
+      {
+        "coupon_code": "FOODIES20",
+        "description": "20% off on all snacks.",
+        "expiry_date": "2024-12-31",
+        "condition": "Minimum purchase of 500 BDT.",
+        "coupon_type": "Discount"
+      },
+      {
+        "coupon_code": "GIFT500",
+        "description": "Get a free gift with orders over 500 BDT.",
+        "expiry_date": "2024-12-15",
+        "condition": "While stocks last.",
+        "coupon_type": "Gift"
+      },
+      {
+        "coupon_code": "CASHBACK10",
+        "description": "10% cashback on all purchases.",
+        "expiry_date": "2024-11-30",
+        "condition": "Cashback credited within 24 hours.",
+        "coupon_type": "Cashback"
+      }
+    ],
+    "shop_Link": "https://www.priyofood.com",
+    "category": "Food",
+    "isSaleOn": true
+  }
+]

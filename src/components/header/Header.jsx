@@ -1,11 +1,23 @@
 import { FaRegUserCircle, FaUser } from "react-icons/fa";
 import { TbLogout, TbLogout2 } from "react-icons/tb";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import logoImg from "../../assets/Couponcart-logo-small.png";
+import useAuthContext from "../../hooks/useAuthContext";
 
 const Header = () => {
+  const { user, logOut, setUser } = useAuthContext();
+  const navigate = useNavigate();
+  // console.log(user.photoURL)
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        setUser(null);
+        navigate("/");
+      })
+      .catch((error) => console.log(error));
+  };
   return (
-    <div className=" bg-base-100">
+    <div className=" bg-base-100 sticky top-0 z-50">
       <div className="navbar w-10/12 mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
@@ -72,41 +84,62 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          {/* dropdown btn */}
-          <div className="dropdown dropdown-bottom">
-            <div
-              tabIndex={0}
-              role="button"
-              className=" w-full text-end flex justify-center"
-            >
-              <div className="btn btn-ghost rounded-btn text-xl">
-                <FaRegUserCircle />
+          {user ? (
+            <>
+              {/* dropdown btn */}
+              <div className="dropdown dropdown-bottom">
+                <div
+                  tabIndex={0}
+                  role="button"
+                  className=" w-full text-end flex justify-center"
+                >
+                  {user?.photoURL ? (
+                    <div className="text-sm">
+                      {" "}
+                      <img
+                        src={user?.photoURL}
+                        alt={user.displayName}
+                        className="w-12 h-12 rounded-full"
+                      />{" "}
+                    </div>
+                  ) : (
+                    <div className="btn btn-ghost rounded-btn text-xl">
+                      {" "}
+                      <FaRegUserCircle />
+                    </div>
+                  )}
+                </div>
+                <ul
+                  tabIndex={0}
+                  className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                >
+                  <li>
+                    <a>
+                      <FaUser /> My Profile
+                    </a>
+                  </li>
+                  <li>
+                    <button onClick={handleLogOut}>
+                      <TbLogout2 /> Logout
+                    </button>
+                  </li>
+                </ul>
               </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
-            >
-              <li>
-                <a>
-                  <FaUser /> My Profile
-                </a>
-              </li>
-              <li>
-                <a>
-                  <TbLogout2 /> Logout
-                </a>
-              </li>
-            </ul>
-          </div>
-          {/* login btn */}
-          <div>          
-              <Link to={"/login"} className="flex justify-center items-center gap-1 text-xl btn btn-ghost">
-                {" "}
-                <TbLogout /> <span className="text-lg">Log-In</span>
-              </Link>
-          
-          </div>
+            </>
+          ) : (
+            <>
+              {/* login btn */}
+              <div>
+                <Link
+                  to={"/login"}
+                  className="flex justify-center items-center gap-1 text-xl btn btn-ghost"
+                >
+                  {" "}
+                  <TbLogout /> <span className="text-lg">Log-In</span>
+                </Link>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
