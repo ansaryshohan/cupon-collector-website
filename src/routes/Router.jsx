@@ -9,6 +9,7 @@ import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import BrandDetailsPage from "../pages/BrandDetailsPage";
+import CouponDetailsPage from "../pages/CouponDetailsPage";
 
 const router = createBrowserRouter([
   {
@@ -23,10 +24,16 @@ const router = createBrowserRouter([
       {
         path: "/brands",
         element: <BrandsPage />,
+        loader: ()=> fetch("/couponData.json")
       },
       {
-        path: "/brands/:brandId",
+        path: "/brand/:brandId",
         element: <BrandDetailsPage />,
+        loader: ()=> fetch("/couponData.json")
+      },
+      {
+        path: "/brand/coupon/:couponCode",
+        element: <CouponDetailsPage />,
         loader: ()=> fetch("/couponData.json")
       },
       {

@@ -40,7 +40,7 @@ const SingleBrandsCard = ({ singleBrandData }) => {
           {/* action button div */}
           <div className=" pr-2">
             {" "}
-            <Link to={`/brands/${_id}`}>
+            <Link to={`/brand/${_id}`}>
               <FaArrowAltCircleRight className="text-xl text-secondary-color hover:text-primary-color" />
             </Link>
           </div>

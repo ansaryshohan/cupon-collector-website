@@ -8,6 +8,7 @@
     "coupons": [
       {
         "coupon_code": "DARAZ50",
+        "coupon_title": "50% Off",
         "description": "Get 50% off on selected products.",
         "expiry_date": "2024-12-31",
         "condition": "Minimum purchase of 1000 BDT.",
@@ -15,6 +16,7 @@
       },
       {
         "coupon_code": "DARAZNEW20",
+        "coupon_title": "20% Off",
         "description": "20% off for new users.",
         "expiry_date": "2024-11-30",
         "condition": "Valid for first-time users only.",
@@ -34,6 +36,7 @@
     "coupons": [
       {
         "coupon_code": "PICK500",
+        "coupon_title": "500tk Off",
         "description": "Flat 500 BDT off on orders over 5000 BDT.",
         "expiry_date": "2024-11-25",
         "condition": "Applies to electronics only.",
@@ -53,6 +56,7 @@
     "coupons": [
       {
         "coupon_code": "CHAL10",
+        "coupon_title": "10% Off",
         "description": "10% discount on your first grocery order.",
         "expiry_date": "2025-01-01",
         "condition": "Minimum purchase of 500 BDT.",
@@ -61,7 +65,7 @@
     ],
     "shop_Link": "https://www.chaldal.com",
     "category": "Groceries",
-    "isSaleOn": false
+    "isSaleOn": true
   },
   {
     "_id": "4",
@@ -72,6 +76,7 @@
     "coupons": [
       {
         "coupon_code": "FPFREEDEL",
+        "coupon_title": "Free Delivery",
         "description": "Free delivery on orders over 300 BDT.",
         "expiry_date": "2024-12-01",
         "condition": "Available in selected areas.",
@@ -91,6 +96,7 @@
     "coupons": [
       {
         "coupon_code": "DEAL20",
+        "coupon_title": "20% Off",
         "description": "20% off on fashion items.",
         "expiry_date": "2024-12-31",
         "condition": "Maximum discount is 200 BDT.",
@@ -99,7 +105,7 @@
     ],
     "shop_Link": "https://www.ajkerdeal.com",
     "category": "E-commerce",
-    "isSaleOn": true
+    "isSaleOn": false
   },
   {
     "_id": "6",
@@ -110,6 +116,7 @@
     "coupons": [
       {
         "coupon_code": "BDOOM15",
+        "coupon_title": "15% Off",
         "description": "15% off on all beauty products.",
         "expiry_date": "2024-12-15",
         "condition": "Valid for beauty products only.",
@@ -118,7 +125,7 @@
     ],
     "shop_Link": "https://www.bagdoom.com",
     "category": "Lifestyle",
-    "isSaleOn": true
+    "isSaleOn": false
   },
   {
     "_id": "7",
@@ -129,6 +136,7 @@
     "coupons": [
       {
         "coupon_code": "OTHOBA200",
+        "coupon_title": "200tk Off",
         "description": "200 BDT off on orders over 2000 BDT.",
         "expiry_date": "2024-11-30",
         "condition": "Minimum order value required.",
@@ -148,6 +156,7 @@
     "coupons": [
       {
         "coupon_code": "SHJGFREE",
+        "coupon_title": "Free Gift",
         "description": "Free gift with every order over 1000 BDT.",
         "expiry_date": "2024-12-10",
         "condition": "Valid for all users.",
@@ -156,7 +165,7 @@
     ],
     "shop_Link": "https://www.shajgoj.com",
     "category": "Beauty",
-    "isSaleOn": true
+    "isSaleOn": false
   },
   {
     "_id": "9",
@@ -167,6 +176,7 @@
     "coupons": [
       {
         "coupon_code": "EVALY100",
+        "coupon_title": "100tk Cashback",
         "description": "100 BDT cashback on orders over 1000 BDT.",
         "expiry_date": "2024-11-25",
         "condition": "Cashback credited to wallet.",
@@ -186,6 +196,7 @@
     "coupons": [
       {
         "coupon_code": "PRIYO300",
+        "coupon_title": "300tk Off",
         "description": "300 BDT off on orders over 3000 BDT.",
         "expiry_date": "2024-12-31",
         "condition": "Valid for fashion products only.",
@@ -194,7 +205,7 @@
     ],
     "shop_Link": "https://www.priyoshop.com",
     "category": "E-commerce",
-    "isSaleOn": true
+    "isSaleOn": false
   },
   {
     "_id": "11",
@@ -205,6 +216,7 @@
     "coupons": [
       {
         "coupon_code": "ROKOMARI20",
+        "coupon_title": "20% Off",
         "description": "20% off on all books.",
         "expiry_date": "2024-12-31",
         "condition": "Maximum discount is 500 BDT.",
@@ -212,6 +224,7 @@
       },
       {
         "coupon_code": "EDUCATION10",
+        "coupon_title": "10% Off",
         "description": "10% off on educational resources.",
         "expiry_date": "2025-01-15",
         "condition": "Valid for textbooks only.",
@@ -219,6 +232,7 @@
       },
       {
         "coupon_code": "FREEDELIVERY",
+        "coupon_title": "Free Delivery",
         "description": "Free delivery on orders over 1000 BDT.",
         "expiry_date": "2024-11-30",
         "condition": "Minimum purchase required.",
@@ -238,6 +252,7 @@
     "coupons": [
       {
         "coupon_code": "BIKROYADS",
+        "coupon_title": "50% Off",
         "description": "50% off on premium ads.",
         "expiry_date": "2024-12-15",
         "condition": "Valid for posting ads only.",
@@ -245,6 +260,7 @@
       },
       {
         "coupon_code": "SELLER25",
+        "coupon_title": "25% Off",
         "description": "25% discount for top sellers.",
         "expiry_date": "2024-12-31",
         "condition": "Must have sold 10+ items.",
@@ -252,6 +268,7 @@
       },
       {
         "coupon_code": "LOYALTY10",
+        "coupon_title": "10% Off",
         "description": "10% off for loyalty members.",
         "expiry_date": "2025-01-01",
         "condition": "Applicable for verified users.",
@@ -260,7 +277,7 @@
     ],
     "shop_Link": "https://www.bikroy.com",
     "category": "Marketplace",
-    "isSaleOn": false
+    "isSaleOn": true
   },
   {
     "_id": "13",
@@ -271,6 +288,7 @@
     "coupons": [
       {
         "coupon_code": "PATHAO50",
+        "coupon_title": "50tk Off",
         "description": "50 BDT off on your next ride.",
         "expiry_date": "2024-12-31",
         "condition": "Applicable for rides only.",
@@ -278,6 +296,7 @@
       },
       {
         "coupon_code": "EATS15",
+        "coupon_title": "20% Off",
         "description": "15% off on food delivery orders.",
         "expiry_date": "2024-11-30",
         "condition": "Minimum order value of 500 BDT.",
@@ -285,6 +304,7 @@
       },
       {
         "coupon_code": "FIRST50",
+        "coupon_title": "50% Off",
         "description": "50% off on your first service.",
         "expiry_date": "2025-01-15",
         "condition": "Valid for new users.",
@@ -304,6 +324,7 @@
     "coupons": [
       {
         "coupon_code": "WEGRO10",
+        "coupon_title": "10% Off",
         "description": "10% off on organic fruits and vegetables.",
         "expiry_date": "2024-12-25",
         "condition": "Maximum discount of 200 BDT.",
@@ -311,6 +332,7 @@
       },
       {
         "coupon_code": "FREESHIPPING",
+        "coupon_title": "Free Delivery",
         "description": "Free delivery on orders over 1000 BDT.",
         "expiry_date": "2024-11-30",
         "condition": "Available in Dhaka only.",
@@ -318,6 +340,7 @@
       },
       {
         "coupon_code": "LOYALTY20",
+        "coupon_title": "20% Cashback",
         "description": "20% cashback for loyalty members.",
         "expiry_date": "2024-12-31",
         "condition": "Cashback credited to account.",
@@ -326,7 +349,7 @@
     ],
     "shop_Link": "https://www.wegro.com.bd",
     "category": "Groceries",
-    "isSaleOn": false
+    "isSaleOn": true
   },
   {
     "_id": "15",
@@ -337,6 +360,7 @@
     "coupons": [
       {
         "coupon_code": "FOODIES20",
+        "coupon_title": "20% Off",
         "description": "20% off on all snacks.",
         "expiry_date": "2024-12-31",
         "condition": "Minimum purchase of 500 BDT.",
@@ -344,6 +368,7 @@
       },
       {
         "coupon_code": "GIFT500",
+        "coupon_title": "Free Gift",
         "description": "Get a free gift with orders over 500 BDT.",
         "expiry_date": "2024-12-15",
         "condition": "While stocks last.",
@@ -351,6 +376,7 @@
       },
       {
         "coupon_code": "CASHBACK10",
+        "coupon_title": "10% Cashback",
         "description": "10% cashback on all purchases.",
         "expiry_date": "2024-11-30",
         "condition": "Cashback credited within 24 hours.",
