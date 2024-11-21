@@ -8,7 +8,7 @@ const BrandDetailComp = ({brandData}) => {
   const { brand_name, description, rating, brand_logo, coupons, category,shop_Link } =
     brandData;
   return (
-    <div className="flex flex-col md:flex-row justify-center gap-6 items-stretch pt-20 pb-10 w-10/12 mx-auto ">
+    <div className="flex flex-col md:flex-row justify-stretch gap-6 items-stretch pt-10 pb-10 w-10/12 mx-auto ">
         <div className="border p-6">
           <Link to={shop_Link} target="_blank"><img src={brand_logo} alt="" className="w-full h-44" /></Link>
         </div>

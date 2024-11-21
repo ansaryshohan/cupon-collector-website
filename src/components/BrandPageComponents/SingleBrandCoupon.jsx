@@ -10,7 +10,7 @@ const SingleBrandCoupon = ({couponData}) => {
     expiry_date,
   }= couponData;
   return (
-    <div className="card bg-base-100  shadow-xl">
+    <div className="card bg-base-100  shadow-xl hover:bg-sky-200 hover:duration-500 hover:ease-in-out">
   <div className="card-body">
     <h2 className="card-title">{coupon_title}</h2>
     <p>{description}</p>

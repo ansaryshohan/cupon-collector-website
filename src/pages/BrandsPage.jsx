@@ -1,6 +1,6 @@
 import { useLoaderData } from "react-router-dom";
 import CommonBanner from "../components/shared/CommonBanner";
-import SingleBrandComponent from "../components/BrandPageComponents/SingleBrandComponent";
+import SingleBrandComponent from "../components/brandPageComponents/SingleBrandComponent";
 
 const BrandsPage = () => {
   const couponData= useLoaderData();
