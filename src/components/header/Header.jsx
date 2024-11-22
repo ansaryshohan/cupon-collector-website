@@ -3,18 +3,19 @@ import { TbLogout, TbLogout2 } from "react-icons/tb";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import logoImg from "../../assets/Couponcart-logo-small.png";
 import useAuthContext from "../../hooks/useAuthContext";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const { user, logOut, setUser } = useAuthContext();
   const navigate = useNavigate();
-  // console.log(user.photoURL)
+  // console.log(user)
   const handleLogOut = () => {
     logOut()
       .then(() => {
         setUser(null);
         navigate("/login");
       })
-      .catch((error) => console.log(error));
+      .catch((error) => toast.error(error));
   };
   return (
     <div className=" bg-base-100 sticky top-0 z-50">

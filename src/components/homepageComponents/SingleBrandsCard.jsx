@@ -22,10 +22,10 @@ const SingleBrandsCard = ({ singleBrandData }) => {
         <p className="flex items-center gap-2 py-0 my-0 ">
           <span className="font-medium">category : </span> {category}{" "}
         </p>
-        <p className="flex items-center gap-2 py-0 my-0">
+        <div className="flex items-center gap-2 py-0 my-0">
           <span className="font-medium">Rating : </span>{" "}
           <Rating starCount={rating} />{" "}
-        </p>
+        </div>
 
         <div className="divider my-0"></div>
         <div className="flex justify-between items-center">

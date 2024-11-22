@@ -43,10 +43,10 @@ const CouponModal = ({ brandData, singleCoupon }) => {
             <p className="flex items-center gap-2 py-0 my-0 ">
               <span className="font-medium">category : </span> {category}{" "}
             </p>
-            <p className="flex items-center gap-2 py-0 my-0">
+            <div className="flex items-center gap-2 py-0 my-0">
               <span className="font-medium">Rating : </span>{" "}
               <Rating starCount={rating} />{" "}
-            </p>
+            </div>
           </div>
         </div>
         <div className=" divider"></div>
@@ -64,9 +64,9 @@ const CouponModal = ({ brandData, singleCoupon }) => {
             }}
             text={copyCouponToClipBoard.value}
           >
-            <h3 className="border-2 border-accent text-accent px-5 py-2 w-8/12 mx-auto text-3xl font-bold" title="Click to Copy">
+            <button className="border-2 border-accent text-accent px-5 py-2 w-8/12 mx-auto text-3xl font-bold" title="Click to Copy">
               {coupon_code}
-            </h3>
+            </button>
           </CopyToClipboard>
         </div>
       </div>

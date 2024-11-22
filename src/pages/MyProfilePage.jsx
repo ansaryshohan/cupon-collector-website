@@ -5,7 +5,7 @@ import useAuthContext from "../hooks/useAuthContext";
 const MyProfilePage = () => {
   const { user } = useAuthContext();
   const { displayName, email, photoURL } = user;
-  console.log(user);
+  // console.log(user);
   return (
     <div>
       <CommonBanner title={`Welcome ${email}`} />

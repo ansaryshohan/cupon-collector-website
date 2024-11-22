@@ -13,6 +13,7 @@ import CouponDetailsPage from "../pages/CouponDetailsPage";
 import PrivateRoute from "./PrivateRoute";
 import MyProfilePage from "../pages/MyProfilePage";
 import UpdateProfilePage from "../pages/UpdateProfilePage";
+import ProtectedRoute from "./ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -61,11 +62,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/login",
-        element: <LoginPage />,
+        element: <ProtectedRoute><LoginPage /></ProtectedRoute>,
       },
       {
         path: "/register",
-        element: <RegisterPage />,
+        element: <ProtectedRoute><RegisterPage /></ProtectedRoute>,
       },
     ],
   },

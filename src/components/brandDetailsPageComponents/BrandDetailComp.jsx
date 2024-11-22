@@ -18,10 +18,10 @@ const BrandDetailComp = ({brandData}) => {
           <p className="flex items-center gap-2 py-0 my-0 ">
           <span className="font-medium">category : </span> {category}{" "}
         </p>
-        <p className="flex items-center gap-2 py-0 my-0">
+        <div className="flex items-center gap-2 py-0 my-0">
           <span className="font-medium">Rating : </span>{" "}
           <Rating starCount={rating} />{" "}
-        </p>
+        </div>
         <p className="flex items-center gap-2 py-0 my-0 font-medium mt-3">
           <span className="font-medium">Coupons Available : </span> {coupons.length}
         </p>

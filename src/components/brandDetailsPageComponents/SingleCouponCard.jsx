@@ -80,6 +80,7 @@ const SingleCouponCard = ({ singleCoupon, brandData }) => {
                 <button
                   className="px-8 py-2 text-xl font-bold border-2 border-accent rounded-xl text-accent"
                   title="click to copy"
+                  // onClick={()=>console.log('clicked')}
                 >
                   {coupon_code}
                 </button>

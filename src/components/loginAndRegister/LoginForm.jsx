@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import useAuthContext from "../../hooks/useAuthContext";
 import InputField from "./InputField";
 
@@ -17,13 +18,13 @@ const LoginForm = () => {
 
   let from = location.state?.from || "/";
 
-  const handleUserInput = (e) => {
+  const handleUserInputOnChange = (e) => {
     setUserInput({ ...userInput, [e.target.name]: e.target.value });
 
     if (e.target.name === "email") {
       const emailInputValue = e.target.value;
       const emailRegEx =
-        /^[a-z0-9][a-z0-9-_\.]+@([a-z]|[a-z0-9]?[a-z0-9-]+[a-z0-9])\.[a-z0-9]{2,10}(?:\.[a-z]{2,10})?$/;
+        /^[a-z0-9][a-z0-9-_.]+@([a-z]|[a-z0-9]?[a-z0-9-]+[a-z0-9])\.[a-z0-9]{2,10}(?:\.[a-z]{2,10})?$/;
       if (!emailRegEx.test(emailInputValue)) {
         setErrorState({
           ...errorState,
@@ -75,7 +76,7 @@ const LoginForm = () => {
       }
 
       const isContainsSymbol =
-        /^(?=.*[~`!@#$%^&*()--+={}\[\]|\\:;"'<>,.?/_₹]).*$/;
+        /^(?=.*[~`!@#$%^&*()--+={}[\]|\\:;"'<>,.?/_₹]).*$/;
       if (!isContainsSymbol.test(passwordValue)) {
         setErrorState({
           ...errorState,
@@ -87,14 +88,17 @@ const LoginForm = () => {
     setErrorState({ ...errorState, passwordError: "", emailError: "" });
   };
 
-  const handleOnSubmit = (e) => {
+  const handleLoginOnSubmit = (e) => {
     e.preventDefault();
     setErrorState({ ...errorState, loginError: "" });
+
+    // email and password login
     if (!errorState.emailError && !errorState.passwordError) {
       loginWithEmailAndPassword(userInput.email, userInput.password)
         .then((result) => {
           if (result.user) {
             navigate(from, { replace: true });
+            toast.success("login Successful");
           }
         })
         .catch((err) => setErrorState({ ...errorState, loginError: err.code }));
@@ -108,12 +112,12 @@ const LoginForm = () => {
           navigate(from, { replace: true });
         }
       })
-      .catch((error) => console.log(error));
+      .catch((error) => toast.error(error.code));
   };
 
   return (
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
-      <form className="card-body" onSubmit={handleOnSubmit}>
+      <form className="card-body" onSubmit={handleLoginOnSubmit}>
         <InputField label={"Email"} error={errorState.emailError}>
           <input
             type="email"
@@ -122,19 +126,24 @@ const LoginForm = () => {
             id="email"
             className="input input-bordered"
             value={userInput.email}
-            onChange={handleUserInput}
+            onChange={handleUserInputOnChange}
             required
           />
         </InputField>
-        <InputField label={"Password"} error={errorState.passwordError} passwordToggle={passwordToggle} setPasswordToggle={setPasswordToggle}>
+        <InputField
+          label={"Password"}
+          error={errorState.passwordError}
+          passwordToggle={passwordToggle}
+          setPasswordToggle={setPasswordToggle}
+        >
           <input
-            type={passwordToggle? "text":"password"}
+            type={passwordToggle ? "text" : "password"}
             placeholder="password"
             name="password"
             id="password"
             className="input input-bordered w-full"
             value={userInput.password}
-            onChange={handleUserInput}
+            onChange={handleUserInputOnChange}
             required
           />
         </InputField>
