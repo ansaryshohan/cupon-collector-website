@@ -10,6 +10,7 @@ const LoginForm = () => {
     emailError: "",
     loginError: "",
   });
+  const [passwordToggle, setPasswordToggle] = useState(false);
   const { loginWithGoogle, loginWithEmailAndPassword } = useAuthContext();
   const navigate = useNavigate();
   let location = useLocation();
@@ -125,13 +126,13 @@ const LoginForm = () => {
             required
           />
         </InputField>
-        <InputField label={"Password"} error={errorState.passwordError}>
+        <InputField label={"Password"} error={errorState.passwordError} passwordToggle={passwordToggle} setPasswordToggle={setPasswordToggle}>
           <input
-            type="password"
+            type={passwordToggle? "text":"password"}
             placeholder="password"
             name="password"
             id="password"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             value={userInput.password}
             onChange={handleUserInput}
             required

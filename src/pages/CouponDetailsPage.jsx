@@ -10,7 +10,6 @@ const CouponDetailsPage = () => {
   const brandData= allBrandData.filter(singleData=>singleData.coupons.find(coupon=>coupon.coupon_code===couponCode));
   const couponData= brandData.map(singleData=>singleData.coupons.find(coupon=>coupon.coupon_code===couponCode))
 
-  console.log(couponData);
   
   return (
     <div>

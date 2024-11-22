@@ -1,13 +1,21 @@
 /* eslint-disable react/prop-types */
 
+import { useState } from "react";
+import CopyToClipboard from "react-copy-to-clipboard";
 import { Link } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import logo from "../../assets/Couponcart-logo-small.png";
 import Rating from "../shared/Rating";
-import logo from "../../assets/Couponcart-logo-small.png"
 
 const CouponModal = ({ brandData, singleCoupon }) => {
   const { brand_name, description, rating, brand_logo, category, shop_Link } =
     brandData;
   const { coupon_code } = singleCoupon;
+  const [copyCouponToClipBoard, setCopyCouponToClipBoard] = useState({
+    value: coupon_code,
+    copied: false,
+  });
+
   return (
     <dialog id="coupon-modal" className="modal">
       <div className="modal-box max-w-[70vw]">
@@ -44,11 +52,25 @@ const CouponModal = ({ brandData, singleCoupon }) => {
         <div className=" divider"></div>
         {/* coupon code */}
         <div className="flex items-center justify-center py-2 text-center">
-          <h3 className="border-2 border-accent text-accent px-5 py-2 w-8/12 mx-auto text-3xl font-bold">
-            {coupon_code}
-          </h3>
+          <CopyToClipboard
+            onCopy={() => {
+              setCopyCouponToClipBoard({
+                ...copyCouponToClipBoard,
+                copied: true,
+              });
+              toast.success(
+                `${copyCouponToClipBoard.value} copied to clipboard`
+              );
+            }}
+            text={copyCouponToClipBoard.value}
+          >
+            <h3 className="border-2 border-accent text-accent px-5 py-2 w-8/12 mx-auto text-3xl font-bold" title="Click to Copy">
+              {coupon_code}
+            </h3>
+          </CopyToClipboard>
         </div>
       </div>
+      <ToastContainer/>
     </dialog>
   );
 };

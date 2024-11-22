@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuthContext";
 import InputField from "./InputField";
+import { useState } from "react";
 
 const RegisterForm = () => {
   const { loginWithGoogle } = useAuthContext();
+  const [passwordToggle, setPasswordToggle] = useState(false);
 
   const handleGoogleSignIn = () => {
     loginWithGoogle()
@@ -42,11 +44,15 @@ const RegisterForm = () => {
             required
           />
         </InputField>
-        <InputField label={"Password"}>
+        <InputField
+          label={"Password"}
+          passwordToggle={passwordToggle}
+          setPasswordToggle={setPasswordToggle}
+        >
           <input
-            type="password"
+            type={passwordToggle? "text":"password"}
             placeholder="password"
-            className="input input-bordered"
+            className="input input-bordered w-full"
             required
             name="password"
             id="password"

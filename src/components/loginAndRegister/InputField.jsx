@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 
 import React from "react";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const InputField = ({
   label,
@@ -8,6 +9,8 @@ const InputField = ({
   htmlFor,
   error,
   customClassName = "",
+  passwordToggle,
+  setPasswordToggle,
 }) => {
   const id = htmlFor || getChildrenId(children);
 
@@ -18,7 +21,24 @@ const InputField = ({
           <span className="label-text">{label}</span>
         </label>
       )}
-      {children}
+      {id === "password" ? (
+        <div className="relative w-full">
+          {children}{" "}
+          <div className="absolute top-4 right-6">
+            {passwordToggle ? (
+              <button onClick={() => setPasswordToggle((prev) => !prev)}>
+                <FaEye />
+              </button>
+            ) : (
+              <button onClick={() => setPasswordToggle((prev) => !prev)}>
+                <FaEyeSlash />
+              </button>
+            )}
+          </div>
+        </div>
+      ) : (
+        <>{children}</>
+      )}
 
       {!!error && <p className="text-sm text-red-600 mt-2">{error}</p>}
     </div>
