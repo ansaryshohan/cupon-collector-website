@@ -12,7 +12,7 @@ const Header = () => {
     logOut()
       .then(() => {
         setUser(null);
-        navigate("/");
+        navigate("/login");
       })
       .catch((error) => console.log(error));
   };
@@ -114,9 +114,9 @@ const Header = () => {
                   className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
                 >
                   <li>
-                    <a>
+                    <Link to={"/my-profile"}>
                       <FaUser /> My Profile
-                    </a>
+                    </Link>
                   </li>
                   <li>
                     <button onClick={handleLogOut}>

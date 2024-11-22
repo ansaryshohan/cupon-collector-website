@@ -10,6 +10,9 @@ import LoginPage from "../pages/LoginPage";
 import RegisterPage from "../pages/RegisterPage";
 import BrandDetailsPage from "../pages/BrandDetailsPage";
 import CouponDetailsPage from "../pages/CouponDetailsPage";
+import PrivateRoute from "./PrivateRoute";
+import MyProfilePage from "../pages/MyProfilePage";
+import UpdateProfilePage from "../pages/UpdateProfilePage";
 
 const router = createBrowserRouter([
   {
@@ -28,12 +31,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/brand/:brandId",
-        element: <BrandDetailsPage />,
+        element: <PrivateRoute><BrandDetailsPage /></PrivateRoute>,
         loader: ()=> fetch("/couponData.json")
       },
       {
         path: "/brand/coupon/:couponCode",
-        element: <CouponDetailsPage />,
+        element: <PrivateRoute><CouponDetailsPage /></PrivateRoute>,
         loader: ()=> fetch("/couponData.json")
       },
       {
@@ -47,6 +50,14 @@ const router = createBrowserRouter([
       {
         path: "/about-us",
         element: <AboutUsPage />,
+      },
+      {
+        path: "/my-profile",
+        element: <PrivateRoute><MyProfilePage /></PrivateRoute>,
+      },
+      {
+        path: "/update-profile",
+        element: <PrivateRoute><UpdateProfilePage /></PrivateRoute>,
       },
       {
         path: "/login",

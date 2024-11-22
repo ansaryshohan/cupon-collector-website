@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuthContext from "../../hooks/useAuthContext";
 import InputField from "./InputField";
 
@@ -12,6 +12,9 @@ const LoginForm = () => {
   });
   const { loginWithGoogle, loginWithEmailAndPassword } = useAuthContext();
   const navigate = useNavigate();
+  let location = useLocation();
+
+  let from = location.state?.from || "/";
 
   const handleUserInput = (e) => {
     setUserInput({ ...userInput, [e.target.name]: e.target.value });
@@ -90,7 +93,7 @@ const LoginForm = () => {
       loginWithEmailAndPassword(userInput.email, userInput.password)
         .then((result) => {
           if (result.user) {
-            navigate("/");
+            navigate(from, { replace: true });
           }
         })
         .catch((err) => setErrorState({ ...errorState, loginError: err.code }));
@@ -99,7 +102,11 @@ const LoginForm = () => {
 
   const handleGoogleSignIn = () => {
     loginWithGoogle()
-      .then((result) => console.log(result.user))
+      .then((result) => {
+        if (result.user) {
+          navigate(from, { replace: true });
+        }
+      })
       .catch((error) => console.log(error));
   };
 
