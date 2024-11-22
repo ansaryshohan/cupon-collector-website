@@ -14,6 +14,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyProfilePage from "../pages/MyProfilePage";
 import UpdateProfilePage from "../pages/UpdateProfilePage";
 import ProtectedRoute from "./ProtectedRoute";
+import ForgetPasswordPage from "../pages/ForgetPasswordPage";
 
 const router = createBrowserRouter([
   {
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <ProtectedRoute><LoginPage /></ProtectedRoute>,
+      },
+      {
+        path: "/forget-password",
+        element: <ProtectedRoute><ForgetPasswordPage /></ProtectedRoute>,
       },
       {
         path: "/register",

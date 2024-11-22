@@ -7,12 +7,11 @@ import InputField from "./InputField";
 const LoginForm = () => {
   const [userInput, setUserInput] = useState({ email: "", password: "" });
   const [errorState, setErrorState] = useState({
-    passwordError: "",
     emailError: "",
     loginError: "",
   });
   const [passwordToggle, setPasswordToggle] = useState(false);
-  const { loginWithGoogle, loginWithEmailAndPassword } = useAuthContext();
+  const { loginWithGoogle, loginWithEmailAndPassword, setForgetPasswordEmail } = useAuthContext();
   const navigate = useNavigate();
   let location = useLocation();
 
@@ -23,6 +22,7 @@ const LoginForm = () => {
 
     if (e.target.name === "email") {
       const emailInputValue = e.target.value;
+      setForgetPasswordEmail(emailInputValue);
       const emailRegEx =
         /^[a-z0-9][a-z0-9-_.]+@([a-z]|[a-z0-9]?[a-z0-9-]+[a-z0-9])\.[a-z0-9]{2,10}(?:\.[a-z]{2,10})?$/;
       if (!emailRegEx.test(emailInputValue)) {
@@ -33,59 +33,7 @@ const LoginForm = () => {
         return;
       }
     }
-    if (e.target.name === "password") {
-      const passwordValue = e.target.value;
-      if (passwordValue.length < 6) {
-        setErrorState({
-          ...errorState,
-          passwordError: "Your password must be at least 6 characters",
-        });
-        return;
-      }
-      const isNonWhiteSpace = /^\S*$/;
-      if (!isNonWhiteSpace.test(passwordValue)) {
-        setErrorState({
-          ...errorState,
-          passwordError: "Password must not contain Whitespaces.",
-        });
-        return;
-      }
-      const isContainsUppercase = /^(?=.*[A-Z]).*$/;
-      if (!isContainsUppercase.test(passwordValue)) {
-        setErrorState({
-          ...errorState,
-          passwordError: "Password must have at least one Uppercase Character.",
-        });
-        return;
-      }
-      const isContainsLowercase = /^(?=.*[a-z]).*$/;
-      if (!isContainsLowercase.test(passwordValue)) {
-        setErrorState({
-          ...errorState,
-          passwordError: "Password must have at least one Lowercase Character.",
-        });
-        return;
-      }
-      const isContainsNumber = /^(?=.*[0-9]).*$/;
-      if (!isContainsNumber.test(passwordValue)) {
-        setErrorState({
-          ...errorState,
-          passwordError: "Password must contain at least one Digit.",
-        });
-        return;
-      }
-
-      const isContainsSymbol =
-        /^(?=.*[~`!@#$%^&*()--+={}[\]|\\:;"'<>,.?/_₹]).*$/;
-      if (!isContainsSymbol.test(passwordValue)) {
-        setErrorState({
-          ...errorState,
-          passwordError: "Password must contain at least one Special Symbol.",
-        });
-        return;
-      }
-    }
-    setErrorState({ ...errorState, passwordError: "", emailError: "" });
+    setErrorState({ ...errorState,  emailError: "" });
   };
 
   const handleLoginOnSubmit = (e) => {
@@ -132,7 +80,6 @@ const LoginForm = () => {
         </InputField>
         <InputField
           label={"Password"}
-          error={errorState.passwordError}
           passwordToggle={passwordToggle}
           setPasswordToggle={setPasswordToggle}
         >
@@ -148,9 +95,9 @@ const LoginForm = () => {
           />
         </InputField>
         <label className="label">
-          <a href="#" className="label-text-alt link link-hover">
+          <Link to={"/forget-password"} className="label-text-alt link link-hover">
             Forgot password?
-          </a>
+          </Link>
         </label>
 
         <InputField customClassName="mt-6 " error={errorState.loginError}>

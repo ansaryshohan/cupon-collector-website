@@ -6,13 +6,14 @@ import useAuthContext from "../../hooks/useAuthContext";
 import { toast } from "react-toastify";
 
 const Header = () => {
-  const { user, logOut, setUser } = useAuthContext();
+  const { user, logOut, setUser,setForgetPasswordEmail } = useAuthContext();
   const navigate = useNavigate();
   // console.log(user)
   const handleLogOut = () => {
     logOut()
       .then(() => {
         setUser(null);
+        setForgetPasswordEmail("")
         navigate("/login");
       })
       .catch((error) => toast.error(error));

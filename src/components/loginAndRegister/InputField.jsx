@@ -24,15 +24,15 @@ const InputField = ({
       {id === "password" ? (
         <div className="relative w-full">
           {children}{" "}
-          <div className="absolute top-4 right-6">
+          <div className="absolute top-4 right-6 z-20">
             {passwordToggle ? (
-              <button onClick={() => setPasswordToggle((prev) => !prev)}>
+              <div onClick={() => setPasswordToggle((prev) => !prev)}>
                 <FaEye />
-              </button>
+              </div>
             ) : (
-              <button onClick={() => setPasswordToggle((prev) => !prev)}>
+              <div onClick={() => setPasswordToggle((prev) => !prev)}>
                 <FaEyeSlash />
-              </button>
+              </div>
             )}
           </div>
         </div>
