@@ -22,8 +22,9 @@ const BrandsMarqueeSection = () => {
   }, []);
 
   return (
-    <div className="py-20 w-full">
+    <div className="py-20 w-full ">
       <SectionTitle title={"Top Brands"} />
+      <div className="md:w-10/12 md:mx-auto">
       <Marquee pauseOnHover={true} speed={80}>
         {brandImgData.map((singleImg, idx) => (
           <div key={idx} className="mx-4 cursor-pointer">
@@ -37,6 +38,7 @@ const BrandsMarqueeSection = () => {
           </div>
         ))}
       </Marquee>
+      </div>
     </div>
   );
 };

@@ -9,7 +9,10 @@ const SingleBrandsCard = ({ singleBrandData }) => {
   const { _id, brand_name, rating, brand_logo, coupons, category } =
     singleBrandData;
   return (
-    <div className="card bg-base-100  shadow-xl">
+    <div className="card bg-base-100  shadow-xl" data-aos="fade-down" 
+    data-aos-delay="60"
+    data-aos-duration="1200"
+    data-aos-easing="ease-in-out">
       <figure className="px-2 pt-8">
         <img
           src={brand_logo}

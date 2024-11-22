@@ -1,8 +1,10 @@
 import RegisterForm from "../components/loginAndRegister/RegisterForm";
+import PageTitleWithHelmet from "../components/shared/PageTitleWithHelmet";
 
 const RegisterPage = () => {
   return (
     <div className="w-full">
+      <PageTitleWithHelmet title={"Register"}/>
       <div className="bg-hero-img min-h-80 bg-bottom bg-cover bg-no-repeat bg-fixed ">
         <div className="w-full min-h-80 bg-gradient-to-b from-[#EEEEEE]/40 to-[#EEEEEE]/10 py-12">
           <div className="w-10/12 mx-auto flex flex-col md:flex-row justify-between items-center gap-5 backdrop-blur-xl bg-[#B3E2F4]/20 rounded-2xl p-8">

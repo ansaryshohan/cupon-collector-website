@@ -1,7 +1,10 @@
+import PageTitleWithHelmet from "../components/shared/PageTitleWithHelmet";
 
 const ErrorPage = () => {
   return (
-    <div>ErrorPage</div>
+    <div>
+      <PageTitleWithHelmet title={"Error"} />
+      ErrorPage</div>
   )
 }
 

@@ -2,6 +2,7 @@ import { useState } from "react";
 import CommonBanner from "../components/shared/CommonBanner";
 import useAuthContext from "../hooks/useAuthContext";
 import { useNavigate } from "react-router-dom";
+import PageTitleWithHelmet from "../components/shared/PageTitleWithHelmet";
 
 const UpdateProfilePage = () => {
   const { user, updateUser } = useAuthContext();
@@ -24,6 +25,8 @@ const UpdateProfilePage = () => {
   };
   return (
     <div>
+            <PageTitleWithHelmet title={"Profile Update"}/>
+
       <CommonBanner title={`Update Your Profile`} />
       <div className="flex items-center justify-center mt-10 mb-16">
         <div className="card bg-base-100 w-96 shadow-xl">

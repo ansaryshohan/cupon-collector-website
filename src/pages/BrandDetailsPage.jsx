@@ -2,15 +2,18 @@ import { useLoaderData, useParams } from "react-router-dom";
 import BrandDetailComp from "../components/brandDetailsPageComponents/BrandDetailComp";
 import SingleCouponCard from "../components/brandDetailsPageComponents/SingleCouponCard";
 import CommonBanner from "../components/shared/CommonBanner";
+import PageTitleWithHelmet from "../components/shared/PageTitleWithHelmet";
 
 const BrandDetailsPage = () => {
   const { brandId } = useParams();
   const data = useLoaderData();
   const brandData = data.find((singleData) => singleData._id === brandId);
-  const { coupons } = brandData;
+  const { coupons, brand_name } = brandData;
 
   return (
     <div>
+      <PageTitleWithHelmet title={brand_name} />
+
       <CommonBanner title={"Brand Coupons"} />
       {/* brand details */}
       <BrandDetailComp brandData={brandData} />

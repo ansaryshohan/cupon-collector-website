@@ -2,6 +2,8 @@ import { useLoaderData, useParams } from "react-router-dom";
 import CommonBanner from "../components/shared/CommonBanner";
 import BrandDetailComp from "../components/brandDetailsPageComponents/BrandDetailComp";
 import SingleCouponCard from "../components/brandDetailsPageComponents/SingleCouponCard";
+import PageTitleWithHelmet from "../components/shared/PageTitleWithHelmet";
+import { ToastContainer } from "react-toastify";
 
 const CouponDetailsPage = () => {
   const allBrandData= useLoaderData();
@@ -14,6 +16,9 @@ const CouponDetailsPage = () => {
   return (
     <div>
       <CommonBanner title={"Coupon Details"}/>
+      <PageTitleWithHelmet title={brandData[0].brand_name}/>
+      <ToastContainer position="top-center"/>
+
       {
         brandData.map(singleData=> <BrandDetailComp brandData={singleData}  key={singleData._id}/>)
       }

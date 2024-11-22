@@ -1,3 +1,4 @@
+import AOS from "aos";
 import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -10,7 +11,11 @@ const MainLayout = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [pathname]);
-  
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <div className="flex flex-col justify-between min-h-screen">
       <Header />
@@ -19,7 +24,7 @@ const MainLayout = () => {
       </div>
       <Footer />
 
-      <ToastContainer />
+      <ToastContainer  position="top-center"/>
     </div>
   );
 };

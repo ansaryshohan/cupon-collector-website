@@ -17,6 +17,7 @@ const CouponModal = ({ brandData, singleCoupon }) => {
   });
 
   return (
+    <>
     <dialog id="coupon-modal" className="modal">
       <div className="modal-box max-w-[70vw]">
         <form method="dialog">
@@ -64,14 +65,19 @@ const CouponModal = ({ brandData, singleCoupon }) => {
             }}
             text={copyCouponToClipBoard.value}
           >
-            <button className="border-2 border-accent text-accent px-5 py-2 w-8/12 mx-auto text-3xl font-bold" title="Click to Copy">
+            <button
+              className="border-2 border-accent text-accent px-5 py-2 w-8/12 mx-auto text-3xl font-bold"
+              title="Click to Copy"
+            >
               {coupon_code}
             </button>
           </CopyToClipboard>
         </div>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
     </dialog>
+    </>
+    
   );
 };
 

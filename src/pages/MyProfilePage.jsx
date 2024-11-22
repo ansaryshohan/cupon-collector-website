@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import CommonBanner from "../components/shared/CommonBanner";
+import PageTitleWithHelmet from "../components/shared/PageTitleWithHelmet";
 import useAuthContext from "../hooks/useAuthContext";
 
 const MyProfilePage = () => {
@@ -8,6 +9,8 @@ const MyProfilePage = () => {
   // console.log(user);
   return (
     <div>
+      <PageTitleWithHelmet title={"Profile"} />
+
       <CommonBanner title={`Welcome ${email}`} />
       <div className="flex items-center justify-center mt-10 mb-16">
         <div className="card bg-base-100 w-96 shadow-xl">
