@@ -22,10 +22,10 @@ const Banner = () => {
           centeredSlides={true}
           draggable={true}
           loop={true}
-          // autoplay={{
-          //   delay: 2500,
-          //   disableOnInteraction: false,
-          // }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           pagination={{
             clickable: true,
           }}

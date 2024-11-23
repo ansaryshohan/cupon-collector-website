@@ -10,7 +10,7 @@ const SingleSlider = ({ singleBanner }) => {
         className="w-full h-[550px] object-cover"
       />
       {singleBanner.title ? (
-        <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center backdrop-blur-2xl bg-white/60 w-9/12  px-10 py-20 rounded-2xl">
+        <div className="absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center backdrop-blur-2xl bg-white/60 w-9/12  px-10 py-20 rounded-2xl z-20">
           <h1 className="text-6xl font-bold text-primary-color mb-5">{singleBanner.title}</h1>
           <p className="text-xl font-medium text-secondary-color">{singleBanner.subTitle}</p>
         </div>

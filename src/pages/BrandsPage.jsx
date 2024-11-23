@@ -9,7 +9,7 @@ const BrandsPage = () => {
     <div className="w-full">  
         <PageTitleWithHelmet title={"Brands"}/>
 
-      <CommonBanner title={"All Brands"}/>
+      <CommonBanner title={"All Brands"} searchBar={true}/>
       <div className="w-10/12 mx-auto py-16">
       {
           couponData.map(singleBrand=><SingleBrandComponent key={singleBrand._id} brandData={singleBrand}/>)

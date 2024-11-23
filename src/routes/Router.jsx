@@ -1,20 +1,19 @@
 import { createBrowserRouter } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
 import AboutUsPage from "../pages/AboutUsPage";
+import BrandDetailsPage from "../pages/BrandDetailsPage";
 import BrandsPage from "../pages/BrandsPage";
 import CategoryPage from "../pages/CategoryPage";
-import ContactPage from "../pages/ContactPage";
+import CouponDetailsPage from "../pages/CouponDetailsPage";
 import ErrorPage from "../pages/ErrorPage";
+import ForgetPasswordPage from "../pages/ForgetPasswordPage";
 import HomePage from "../pages/HomePage";
 import LoginPage from "../pages/LoginPage";
-import RegisterPage from "../pages/RegisterPage";
-import BrandDetailsPage from "../pages/BrandDetailsPage";
-import CouponDetailsPage from "../pages/CouponDetailsPage";
-import PrivateRoute from "./PrivateRoute";
 import MyProfilePage from "../pages/MyProfilePage";
+import RegisterPage from "../pages/RegisterPage";
 import UpdateProfilePage from "../pages/UpdateProfilePage";
+import PrivateRoute from "./PrivateRoute";
 import ProtectedRoute from "./ProtectedRoute";
-import ForgetPasswordPage from "../pages/ForgetPasswordPage";
 
 const router = createBrowserRouter([
   {
@@ -29,25 +28,29 @@ const router = createBrowserRouter([
       {
         path: "/brands",
         element: <BrandsPage />,
-        loader: ()=> fetch("/couponData.json")
+        loader: () => fetch("/couponData.json"),
       },
       {
         path: "/brand/:brandId",
-        element: <PrivateRoute><BrandDetailsPage /></PrivateRoute>,
-        loader: ()=> fetch("/couponData.json")
+        element: (
+          <PrivateRoute>
+            <BrandDetailsPage />
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/couponData.json"),
       },
       {
         path: "/brand/coupon/:couponCode",
-        element: <PrivateRoute><CouponDetailsPage /></PrivateRoute>,
-        loader: ()=> fetch("/couponData.json")
+        element: (
+          <PrivateRoute>
+            <CouponDetailsPage />
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/couponData.json"),
       },
       {
         path: "/categories",
         element: <CategoryPage />,
-      },
-      {
-        path: "/contact",
-        element: <ContactPage />,
       },
       {
         path: "/about-us",
@@ -55,23 +58,43 @@ const router = createBrowserRouter([
       },
       {
         path: "/my-profile",
-        element: <PrivateRoute><MyProfilePage /></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <MyProfilePage />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/update-profile",
-        element: <PrivateRoute><UpdateProfilePage /></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <UpdateProfilePage />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
-        element: <ProtectedRoute><LoginPage /></ProtectedRoute>,
+        element: (
+          <ProtectedRoute>
+            <LoginPage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/forget-password",
-        element: <ProtectedRoute><ForgetPasswordPage /></ProtectedRoute>,
+        element: (
+          <ProtectedRoute>
+            <ForgetPasswordPage />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/register",
-        element: <ProtectedRoute><RegisterPage /></ProtectedRoute>,
+        element: (
+          <ProtectedRoute>
+            <RegisterPage />
+          </ProtectedRoute>
+        ),
       },
     ],
   },
