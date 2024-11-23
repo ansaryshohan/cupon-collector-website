@@ -4,37 +4,37 @@ const OurTeam = () => {
       id: 1,
       name: "Leroy Jenkins",
       role: "Visual Designer",
-      image: "https://source.unsplash.com/100x100/?portrait?0",
+      image: "https://img.freepik.com/free-vector/user-blue-gradient_78370-4692.jpg",
     },
     {
       id: 2,
       name: "Jane Doe",
       role: "Web Developer",
-      image: "https://source.unsplash.com/100x100/?portrait?1",
+      image: "https://img.freepik.com/free-vector/user-blue-gradient_78370-4692.jpg",
     },
     {
       id: 3,
       name: "John Smith",
       role: "UI/UX Designer",
-      image: "https://source.unsplash.com/100x100/?portrait?2",
+      image: "https://img.freepik.com/free-vector/user-blue-gradient_78370-4692.jpg",
     },
     {
       id: 4,
       name: "Alice Johnson",
       role: "Project Manager",
-      image: "https://source.unsplash.com/100x100/?portrait?3",
+      image: "https://img.freepik.com/free-vector/user-blue-gradient_78370-4692.jpg",
     },
     {
       id: 5,
       name: "Chris Evans",
       role: "Frontend Developer",
-      image: "https://source.unsplash.com/100x100/?portrait?4",
+      image: "https://img.freepik.com/free-vector/user-blue-gradient_78370-4692.jpg",
     },
     {
       id: 6,
       name: "Emma Watson",
       role: "Backend Developer",
-      image: "https://source.unsplash.com/100x100/?portrait?5",
+      image: "https://img.freepik.com/free-vector/user-blue-gradient_78370-4692.jpg",
     },
   ];
 

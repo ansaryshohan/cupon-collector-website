@@ -51,6 +51,7 @@ const router = createBrowserRouter([
       {
         path: "/categories",
         element: <CategoryPage />,
+        loader: () => fetch("/couponData.json"),
       },
       {
         path: "/about-us",
