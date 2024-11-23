@@ -1,20 +1,16 @@
 /* eslint-disable react/prop-types */
 
-import { useState } from "react";
+// import { useState } from "react";
 import CopyToClipboard from "react-copy-to-clipboard";
 import { Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import logo from "../../assets/Couponcart-logo-small.png";
 import Rating from "../shared/Rating";
 
-const CouponModal = ({ brandData, singleCoupon }) => {
+const CouponModal = ({ brandData, singleCoupon,copyCouponToClipBoard, setCopyCouponToClipBoard }) => {
   const { brand_name, description, rating, brand_logo, category, shop_Link } =
     brandData;
   const { coupon_code } = singleCoupon;
-  const [copyCouponToClipBoard, setCopyCouponToClipBoard] = useState({
-    value: coupon_code,
-    copied: false,
-  });
 
   return (
     <>
@@ -74,7 +70,7 @@ const CouponModal = ({ brandData, singleCoupon }) => {
           </CopyToClipboard>
         </div>
       </div>
-      <ToastContainer />
+      <ToastContainer position="top-center" />
     </dialog>
     </>
     

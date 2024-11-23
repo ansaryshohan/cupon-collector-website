@@ -24,7 +24,7 @@ const MainLayout = () => {
       </div>
       <Footer />
 
-      <ToastContainer  position="top-center"/>
+      <ToastContainer/>
     </div>
   );
 };

@@ -15,11 +15,11 @@ const BrandDetailComp = ({ brandData }) => {
     shop_Link,
   } = brandData;
   return (
-    <div className="flex flex-col md:flex-row justify-stretch gap-6 items-stretch pt-10 pb-10 w-10/12 mx-auto ">
+    <div className="grid grid-cols-1 md:grid-cols-5 gap-6 pt-10 pb-10 w-10/12 mx-auto">
       <div
-        className="border p-6"
+        className="border p-6 col-span-2"
         data-aos="fade-right"
-        data-aos-easing="ease-out-cubic"
+        data-aos-easing="ease-in"
         data-aos-duration="1200"
       >
         <Link to={shop_Link} target="_blank">
@@ -27,9 +27,9 @@ const BrandDetailComp = ({ brandData }) => {
         </Link>
       </div>
       <div
-        className="border p-6"
+        className="border p-6 col-span-3"
         data-aos="fade-left"
-        data-aos-easing="ease-out-cubic"
+        data-aos-easing="ease-in"
         data-aos-duration="1200"
       >
         <h2 className="text-2xl font-semibold">{brand_name}</h2>

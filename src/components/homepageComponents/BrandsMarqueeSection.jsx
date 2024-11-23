@@ -12,7 +12,7 @@ const BrandsMarqueeSection = () => {
       const result = await fetch("/couponData.json");
       const data = await result.json();
       if (!isLoaded) {
-        setBrandImgData(data.map((resultData) => resultData.brand_logo));
+        setBrandImgData(data.map((resultData) => {return{id:resultData._id,image:resultData.brand_logo}}));
       }
     };
     dataFetcher();
@@ -26,11 +26,11 @@ const BrandsMarqueeSection = () => {
       <SectionTitle title={"Top Brands"} />
       <div className="md:w-10/12 md:mx-auto">
       <Marquee pauseOnHover={true} speed={80}>
-        {brandImgData.map((singleImg, idx) => (
-          <div key={idx} className="mx-4 cursor-pointer">
-            <Link to={"/brands"}>
+        {brandImgData.map((singleImg) => (
+          <div key={singleImg.id} className="mx-4 cursor-pointer">
+            <Link to={`/brand/${singleImg.id}`}>
               <img
-                src={singleImg}
+                src={singleImg.image}
                 alt=""
                 className="w-32 h-20 object-cover rounded-xl"
               />

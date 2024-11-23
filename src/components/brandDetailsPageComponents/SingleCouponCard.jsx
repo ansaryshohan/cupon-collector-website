@@ -3,7 +3,6 @@ import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { IoMdInformationCircle, IoMdPricetags, IoMdTime } from "react-icons/io";
 import { Link } from "react-router-dom";
-import { toast } from "react-toastify";
 import CouponModal from "../modal/CouponModal";
 
 const SingleCouponCard = ({ singleCoupon, brandData }) => {
@@ -44,7 +43,6 @@ const SingleCouponCard = ({ singleCoupon, brandData }) => {
         data-aos-easing="ease-out"
         data-aos-duration="1200"
       >
-
         {/* coupon image */}
         <div className="border p-6 px-16 flex flex-col items-center justify-center gap-2 text-center">
           <h3 className="text-orange-500 text-4xl font-bold text-center uppercase">
@@ -78,21 +76,36 @@ const SingleCouponCard = ({ singleCoupon, brandData }) => {
           {/* description */}
           <p className=" my-2 px-12 text-xl font-medium">{description}</p>
           {/* coupon code div */}
-          <div className="px-12">
+          <div className="px-12 flex justify-start items-start">
             {showCoupon ? (
               // coupon copy to clipboard button
-              <CopyToClipboard
-                onCopy={handleCouponOnCopy}
-                text={copyCouponToClipBoard.value}
-              >
-                <button
-                  className="px-8 py-2 text-xl font-bold border-2 border-accent rounded-xl text-accent"
-                  title="click to copy"
-                  onClick={()=>toast.success(`${copyCouponToClipBoard.value} copied to clipboard`)}
+              <div className="flex flex-col gap-1">
+                <CopyToClipboard
+                  onCopy={handleCouponOnCopy}
+                  text={copyCouponToClipBoard.value}
                 >
-                  {coupon_code}
-                </button>
-              </CopyToClipboard>
+                  <div className="inline">
+                    <button
+                      className="px-8 py-2 text-xl font-bold border-2 border-accent rounded-xl text-accent"
+                      title="click to copy"
+                    >
+                      {coupon_code}
+                    </button>
+                  </div>
+                </CopyToClipboard>
+
+                {copyCouponToClipBoard.copied ? (
+                  <span
+                    style={{
+                      color: "red",
+                      fontSize: "12px",
+                      fontWeight: "500",
+                    }}
+                  >
+                    Copied in clipboard.
+                  </span>
+                ) : null}
+              </div>
             ) : (
               <button
                 className="px-8 py-2 text-xl font-bold border border-accent rounded-xl text-accent"
@@ -109,8 +122,12 @@ const SingleCouponCard = ({ singleCoupon, brandData }) => {
           </div>
         </div>
       </div>
-      <CouponModal brandData={brandData} singleCoupon={singleCoupon} />
-      
+      <CouponModal
+        brandData={brandData}
+        singleCoupon={singleCoupon}
+        copyCouponToClipBoard={copyCouponToClipBoard}
+        setCopyCouponToClipBoard={setCopyCouponToClipBoard}
+      />
     </>
   );
 };
