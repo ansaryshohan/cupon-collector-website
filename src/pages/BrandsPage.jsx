@@ -5,6 +5,7 @@ import PageTitleWithHelmet from "../components/shared/PageTitleWithHelmet";
 
 const BrandsPage = () => {
   const allBrandData= useLoaderData();
+  console.log("hello")
   return (
     <div className="w-full">  
         <PageTitleWithHelmet title={"Brands"}/>
