@@ -1,7 +1,7 @@
 # Project Name : [coupon-cart](https://coupon-cart.netlify.app/)
 
 ## **About the Project**
->>> This project is done with `React.js`,`Tailwind css`,`React-router-dom`. the project is on coupons for different e-commerce website, where you can get discount coupon for buying online.
+> This project is done with `React.js`,`Tailwind css`,`React-router-dom`. the project is on coupons for different e-commerce website, where you can get discount coupon for buying online.
 
 
 ## **Key features of  the Project**
