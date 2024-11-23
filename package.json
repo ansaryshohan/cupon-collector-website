@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "git-push": "git push -u assignment main && git push -u origin main"
+    "git-push": "git push -u assignment main"
   },
   "dependencies": {
     "aos": "^2.3.4",
